@@ -1,14 +1,15 @@
 const funcoes = [
-    { profissao: "Engenheiro de Propulsão", missao: "Criar motores eficientes para viagens em Marte." },
-    { profissao: "Biólogo Agrícola", missao: "Desenvolver sistemas de cultivo de alimentos." },
-    { profissao: "Psicólogo Espacial", missao: "Garantir a saúde mental da tripulação." },
-    { profissao: "Mecânico Robótico", missao: "Fazer a manutenção dos robôs exploradores." },
-    { profissao: "Analista de Dados", missao: "Monitorar sinais e dados climáticos de Marte." },
-    { profissao: "Arquiteto Espacial", missao: "Projetar habitats marcianos seguros." },
-    { profissao: "Médico Interplanetário", missao: "Cuidar da saúde dos colonos humanos." },
-    { profissao: "Cientista Geoambiental", missao: "Estudar a composição do solo e sua utilidade." },
-    { profissao: "Engenheiro de Transporte", missao: "Desenvolver veículos para locomoção marciana." },
-    { profissao: "Diretor de Comunicação", missao: "Enviar relatórios e notícias à Terra." }
+  { Nome: "Mare Imbrium", descricao: "Uma das maiores planícies de lava solidificada da Lua, perfeita para pousos e caminhadas." },
+  { Nome: "Cratera Tycho", descricao: "Cratera jovem e brilhante com raios que se estendem por centenas de quilômetros." },
+  { Nome: "Oceanus Procellarum", descricao: "Maior planície oceânica lunar, com locais históricos de missões Apollo." },
+  { Nome: "Montes Apenninus", descricao: "Cadeia montanhosa com picos de quase 5 km de altura e paisagens dramáticas." },
+  { Nome: "Cratera Copernicus", descricao: "Cratera de impacto com paredes altas e pico central, rodeada por raios claros." },
+  { Nome: "Rima Hadley", descricao: "Fenda estreita próxima ao local da Apollo 15, um ponto histórico e fascinante." },
+  { Nome: "Cratera Clavius", descricao: "Uma das maiores crateras visíveis da Lua, com cerca de 225 km de diâmetro, famosa por sua forma circular e pequenas crateras internas." },
+  { Nome: "Cratera Shackleton", descricao: "Localizada no Polo Sul lunar, importante por conter sombra permanente e possível gelo, fundamental para pesquisas futuras." },
+  { Nome: "Vale Schroter", descricao: "Um grande rift vulcânico com mais de 160 km de extensão, ideal para explorar formações geológicas incomuns." },
+  { Nome: "Mare Crisium", descricao: "Grande planície lunar visível da Terra, conhecida por sua cor escura e superfície lisa." },
+  { Nome: "Mons Huygens", descricao: "A montanha mais alta da Lua, com quase 5,5 km de altitude, localizada na cadeia Montes Apenninus." }
 ];
 
 const btn = document.querySelector("button");
@@ -25,8 +26,8 @@ function gerarMissao() {
     setTimeout(() => {
       const sorteio = funcoes[Math.floor(Math.random() * funcoes.length)];
       resultado.innerHTML = `
-        <strong>Profissão:</strong> ${sorteio.profissao}<br>
-        <strong>Missão:</strong> ${sorteio.missao}
+        <strong>Nome:</strong> ${sorteio.Nome}<br>
+        <strong>descrição:</strong> ${sorteio.descricao}
       `;
   
       let op = 0;
@@ -38,7 +39,7 @@ function gerarMissao() {
         op += 0.05;
       }, 50);
   
-      btn.innerText = "Função recebida!";
+      btn.innerText = "Local recebido!";
     }, 2000);
   }
   
